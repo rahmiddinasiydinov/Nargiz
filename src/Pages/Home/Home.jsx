@@ -6,12 +6,18 @@ import { Navigation } from "swiper";
 import './Home.scss';
 import Famous from "../../Components/Famous/Famous";
 import About from "../../Components/About/About";
+import img from '../../Assets/Images/gift.png';
+import kattle from '../../Assets/Images/kattle.png';
 function Home() {
-    const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
+  const [gift, setGift] = useState([]);
     useEffect(() => {
         fetch("https://nargiz-back.herokuapp.com/pottery")
             .then(res => res.json())
-            .then(data => setData(data));
+          .then(data => {
+            setData(data);
+            setGift([data[0], data[1]])
+          });
     }, []);
   return (
     <>
@@ -86,6 +92,63 @@ function Home() {
                   <button className="gift__catalogue">Catalogue</button>
                 </div>
               </div>
+              <img src={img} alt="img" className="gift__img" />
+            </div>
+          </div>
+        </section>
+        <section className="gift__product">
+          <div className="container">
+            <div className="gift__product--wrapper">
+              <div className="gift__product--img">
+                <div className="rec"></div>
+                <img
+                  src={gift[0]?.img}
+                  alt="img"
+                  className="gift__img--product"
+                />
+              </div>
+              <div className="gift__info">
+                <h4 className="gift__info--title">{gift[0]?.name}</h4>
+                <p className="gift__info--text">{gift[0]?.desc}</p>
+                <a href="/" className="gift__info--link">
+                  View details
+                </a>
+              </div>
+            </div>
+            <div className="gift__product--wrapper">
+              <div className="gift__info">
+                <h4 className="gift__info--title">{gift[1]?.name}</h4>
+                <p className="gift__info--text">{gift[1]?.desc}</p>
+                <a href="/" className="gift__info--link">
+                  View details
+                </a>
+              </div>
+              <div className="gift__product--img">
+                <div className="rec"></div>
+                <img
+                  src={gift[1]?.img}
+                  alt="img"
+                  className="gift__img--product"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="coupon">
+          <div className="coupon__container">
+            <div className="coupon__wrapper">
+              <div className="coupon__content">
+                {" "}
+                <h2 className="coupon__title">Get you coupon card $150</h2>
+                <p className="coupon__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim in eros elementum.
+                </p>
+                <a href="/products" className="coupon__link">
+                  View
+                </a>
+              </div>
+              <img src={kattle} alt="" className="coupon__img" />
             </div>
           </div>
         </section>

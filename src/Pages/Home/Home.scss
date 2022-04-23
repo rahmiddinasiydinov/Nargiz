@@ -71,19 +71,12 @@
         justify-content: space-between;
     }
     &__content{
-        background-image: url('../../Assets/Images/gift.png');
-        background-repeat: no-repeat;
-        background-position: 130% -100px,   ;
-        background-size: contain;
-        padding-bottom: 100px;
+        width: 50%;
         
     }
-    &__title{
-        width: 50%
-    }
+    
     &__text{
         @include text;
-        width: 50%;
         margin-top: 16px;
     }
     &__buttons{
@@ -99,5 +92,118 @@
     }
     &__img{
         width: 50%;
+        &--product{
+            width: 40%;
+        }
     }
+    &__product{
+        margin-top: 50px;
+        &--wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        &--img{
+            width: 40%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__info{
+        width: 50%;
+        &--title{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 34px;
+            color: #000000;
+        }
+        &--text{
+            margin-top: 23px;
+            width: 388px;
+            font-family: 'Libre Franklin';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #6C6C6C;
+        }
+        &--link{
+            display: inline-block;
+            margin-top: 27px;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            color: #000000;
+            transition: .3s;
+            &:hover{
+                font-size: 18px;
+                transform: .3s;
+            }
+            
+        }
+        
+    }
+}
+.rec{
+    width: 500px;
+    height: 220px;
+    background-color: #F5F5F5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+}
+
+//COUPON
+.coupon{
+    margin-top: 250px;
+    padding: 70px 0;
+    background: #204261;
+    &__container{
+        padding: 0 200px;
+    }
+    &__title{
+        color: #fff;
+        font-size: 48px;
+    }
+    &__text{
+        margin-top: 16px;
+        font-style: normal;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 21.3333px;
+        line-height: 32px;
+        color: #FFFFFF;
+        width: 561px;
+        max-width: 100%;
+    }
+    &__link{
+        @include button__light;
+        display: block;
+        margin-top: 40px;
+        border: none;
+        width: 180px;
+        text-align: center;
+    }
+    &__wrapper{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__img{
+        position: absolute;
+        top: -300px;
+        right: -100px;
+        // width: 50%;
+    }
+
 }
