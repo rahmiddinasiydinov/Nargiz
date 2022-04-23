@@ -1,0 +1,50 @@
+@mixin  button{
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    display: flex;
+    align-items: flex-end;
+    color: #FFFFFF;
+    background: #156963;
+    padding: 17px 34px;
+    border-radius: 100px;
+    border: none;
+    transition: .3s;
+    box-sizing: border-box;
+    border: 2px solid #156963;
+    &:hover{
+        transition: .3s;
+        color:#156963;
+        border: 2px solid #156963;
+        background: #FFFFFF;
+    }
+}
+@mixin button__light {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    display: flex;
+    align-items: flex-end;
+    color:#156963;
+    background: #FFFFFF;
+    padding: 17px 34px;
+    border-radius: 100px;
+    border: none;
+    border: 2px solid #156963;
+    transition: .3s;
+    &:hover{
+        transition: .3s;
+        color: #FFFFFF;
+        background: #156963;
+    }
+}
+@mixin text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #156963;
+    opacity: 0.75;
+}

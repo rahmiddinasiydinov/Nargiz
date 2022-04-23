@@ -1,0 +1,91 @@
+@import '../../VariablesSCSS//Variable.scss';
+.header{
+    padding: 38px 0 28px;
+    background-color:#FFF9F3;
+    &__filter{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        font-family: 'Poppins';
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+        color: #3E3E3E;
+    }
+    &__form{
+        width: 760px;
+        padding: 8px 12px 8px 8px;
+        padding-right: 15px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        background-color: #FFFFFF;
+    }
+    &__select{
+        padding: 8px 14px 8px 24px;
+        background: #F5F6F8;
+        font-family: "Poppins", sans-serif;
+        color: #3E3E3E;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        border-radius: 50px;
+        border: none;
+        
+    }
+    &__input{
+        flex-grow: 1;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #3E3E3E;
+        margin-right: 20px;
+        border: none;
+        outline: none;
+        margin-left: 15px;
+        &::placeholder{
+            color: #9A9A9A;
+        }
+    }
+    &__search{
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+    }
+    &__nav{
+        margin-top: 30px;
+        
+    }
+    &__list{
+        display: flex
+    }
+    &__item{
+        margin-right: 48px;
+    }
+    &__link{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #3E3E3E
+    }
+    &__btn{
+        @include button;
+        display:flex;
+        align-items: center;
+        
+    }
+    .phone{
+        margin-right: 15px;
+    }
+}
+.active{
+    color: #156963;
+}
