@@ -1,0 +1,24 @@
+@import '../../VariablesSCSS/Variable.scss';
+.notfound{
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &__img{
+        width: 30%;
+        max-width: 100%;
+    }
+    &__btn{
+        @include button;
+        animation-name: lightup;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+}
+@keyframes lightup {
+    50%{
+        box-shadow: 0 0 10px 3px #156963;
+    }
+}

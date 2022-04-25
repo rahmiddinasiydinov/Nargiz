@@ -9,7 +9,7 @@
         justify-content: space-evenly;
     }
     &__swiper{
-        background-image: url('../../Assets/Images/N.png');
+        background-image: url('../../Assets/SVG/N.svg');
         background-position:right center ;
         background-repeat: no-repeat;
     }
@@ -36,6 +36,7 @@
     }
     &__btn{
         margin-top: 23px;
+        width: 250px;
         @include button
     }
     &__design{
@@ -61,7 +62,7 @@
 .gift{
     margin-top: 100px;
     padding-top: 80px;
-    background-image: url('../../Assets/Images/G.png');
+    background-image: url('../../Assets/SVG/G.svg');
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain;
@@ -92,6 +93,16 @@
     }
     &__img{
         width: 50%;
+        transition: .5s;
+        cursor: pointer;
+        &:hover{
+            transition: .5s;
+           animation-name: tea;
+           animation-duration: .5s;
+            animation-iteration-count: 2;
+            animation-timing-function: linear;
+
+        }
         &--product{
             width: 40%;
         }
@@ -168,6 +179,13 @@
     margin-top: 250px;
     padding: 70px 0;
     background: #204261;
+    position: relative;
+    &__Iimg{
+        position: absolute;
+        left: 0;
+        top:-20%;
+        z-index: -1;
+    }
     &__container{
         padding: 0 200px;
     }
@@ -190,8 +208,8 @@
         @include button__light;
         display: block;
         margin-top: 40px;
-        border: none;
         width: 180px;
+        border-color: #204261;
         text-align: center;
     }
     &__wrapper{
@@ -203,7 +221,28 @@
         position: absolute;
         top: -300px;
         right: -100px;
+        transition: 1s;
+        cursor:alias;
+        &:hover{
+            transform: rotate(45deg);
+            transition: 1s ease-out;
+
+        }
         // width: 50%;
     }
 
+}
+@keyframes tea {
+    25%{
+         transform:  rotate(20deg);
+    }
+    50%{
+         transform:  rotate(0deg);
+    }
+    75%{
+         transform:   rotate(-20deg);
+    }
+    100%{
+         transform: rotate(0deg);
+    }
 }

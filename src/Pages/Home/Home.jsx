@@ -1,5 +1,6 @@
 import React, { useEffect, useState }  from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
@@ -8,6 +9,8 @@ import Famous from "../../Components/Famous/Famous";
 import About from "../../Components/About/About";
 import img from '../../Assets/Images/gift.png';
 import kattle from '../../Assets/Images/kattle.png';
+import Iimg from '../../Assets/SVG/I.svg';
+import Project from "../../Components/Project/Project";
 function Home() {
   const [data, setData] = useState([]);
   const [gift, setGift] = useState([]);
@@ -36,7 +39,7 @@ function Home() {
                       <div>
                         <h2 className="view__title">{e.name}</h2>
                         <p className="view__text">{e.desc}</p>
-                        <button className="view__btn">Explore Catalogue</button>
+                        <Link to='/products' className="view__btn">Explore Catalogue</Link>
                       </div>
                       <img src={e.img} alt="img is failed" />
                     </div>
@@ -135,6 +138,7 @@ function Home() {
           </div>
         </section>
         <section className="coupon">
+          <img className="coupon__Iimg" src={Iimg} alt =""/>
           <div className="coupon__container">
             <div className="coupon__wrapper">
               <div className="coupon__content">
@@ -152,6 +156,7 @@ function Home() {
             </div>
           </div>
         </section>
+        <Project/>
       </main>
     </>
   );

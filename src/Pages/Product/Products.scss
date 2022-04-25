@@ -1,0 +1,27 @@
+.product{
+   &__coupon{
+       background-color: #156963;
+       &--link{
+           border-color: #156963;
+       }
+   }
+   &__Iimg{
+       display: none;
+   }
+   &__famous{
+       margin-top: 50px;
+       &--title{
+           width: 756px;
+           max-width: 100%;
+        }
+        &--wrapper{
+           margin-top: 50px;
+           display: flex;
+           justify-content:flex-start;
+           flex-wrap: wrap;
+       }
+       &--link{
+           margin-right: 24px;
+       }
+   }
+}

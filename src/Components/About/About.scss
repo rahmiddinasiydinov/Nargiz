@@ -2,7 +2,7 @@
 .about{
     padding: 90px 0;
     background: #156963;
-    background-image: url('../../Assets/Images/R.png');
+    background-image: url('../../Assets/SVG/R.svg');
     background-repeat: no-repeat;
     background-position: left center;
     &__wrapper{
@@ -42,11 +42,10 @@
         max-width: 100%
     }
     &__btn{
-        @include button;
+        @include button__light;
         cursor: pointer;
         margin-top: 34px;
-        color: #156963;
-        background-color: #FFFFFF;
+        border:2px solid #ffffff ;
     }
     &__list{
         display: flex;
