@@ -12,6 +12,7 @@
     transition: .3s;
     box-sizing: border-box;
     border: 2px solid #156963;
+    cursor: pointer;
     &:hover{
         transition: .3s;
         color:#156963;
@@ -34,6 +35,7 @@
     border: 2px solid #156963;
     box-sizing: border-box;
     transition: .3s;
+    cursor: pointer;
     &:hover{
         transition: .3s;
         color: #FFFFFF;

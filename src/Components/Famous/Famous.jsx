@@ -37,7 +37,7 @@ function Famous() {
             >
               {data?.map((e, i) => (
                 <SwiperSlide key={i}>
-                  <Link to={`/product/${e.id}`}>
+                  <Link to={`/single/${e._id}`}>
                     <FamousCard img={e.img} title={e.desc} price={e.price} />
                   </Link>
                 </SwiperSlide>

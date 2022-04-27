@@ -31,7 +31,7 @@ function Products() {
             <h2 className="product__famous--title">The most famous products</h2>
             <div className="product__famous--wrapper">
               {data?.map((e, i) => (
-                  <Link key={i} to={`/product/${e.id}`} className='product__famous--link'>
+                  <Link key={i} to={`/single/${e._id}`} className='product__famous--link'>
                     <FamousCard img={e.img} title={e.desc} price={e.price} />
                   </Link>
               ))}

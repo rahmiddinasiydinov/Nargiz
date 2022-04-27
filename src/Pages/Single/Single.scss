@@ -1,0 +1,121 @@
+@import '../../VariablesSCSS/Variable.scss';
+.single{
+    &__title{
+        margin-top: 92px;
+    }
+    &__wrapper{
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    &__swipe{
+        width: 150px;
+        max-width: 100%;
+        margin-right: 100px;
+        height: 750px;
+        &--wrapper{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        &--img{
+            height: 90% ;
+        }
+    }
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        
+    }
+    &__img{
+        width: 250px;
+        height: 685px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    &__content{
+        width: 580px;
+        max-width: 100%;
+    }
+    &__text{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+        color: #374151;
+    }
+    &__clouses{
+        margin-top: 40px;
+        padding: 32px 70px;
+        background: #F3F4F6;
+        border-radius: 7px;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__deliver{
+        margin-right: 17px;
+    }
+    &__subtitle{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 0.02em;
+        color: #156963;
+    }
+    &__lighttext{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 0.02em;
+        color: #374151;
+        
+    }
+    &__btn{
+        margin-top: 40px;
+        @include button;
+        width:100%;
+        max-width: 100%;
+        display: block;
+        text-align: center;
+        padding: auto;
+    }
+    &__description{
+        margin-top: 110px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 39.9175px;
+        line-height: 60px;
+        letter-spacing: 0.02em;
+        color: #156963;
+        &--text{
+            margin-top: 33px;
+            @include text;
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: 0.02em;
+        }
+    }
+    
+}
+
+// swiper
+
+.swiper{
+    &-vertical{
+        height: 100%;
+    }
+}
