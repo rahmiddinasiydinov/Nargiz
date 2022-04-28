@@ -5,3 +5,18 @@
 .not-active{
     display: none !important;
 }
+.spin{
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.not-active{
+    display: none;
+    transition: .5s ease-in;
+}
+.add-opacity{
+    opacity: 0;
+    transition: .5s ease-in;
+}
