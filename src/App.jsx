@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router';
 import './App.scss';
 import Header from './Components/Header/Header';
+import Mobile from './Components/Header/HeaderMobile';
 import Home from './Pages/Home/Home';
 import Footer from './Components/Footer/Footer';
 import Notfound from './Components/Notfound/Notfound';
@@ -38,6 +39,7 @@ function App() {
       </div>
       <>
         <Header />
+        <Mobile/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />

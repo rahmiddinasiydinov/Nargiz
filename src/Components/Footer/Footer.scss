@@ -76,3 +76,16 @@
         }
     }
 }
+@media screen and (max-width:800px) {
+    .footer{
+        &__wrapper{
+            justify-content: center;
+        }
+        &__info{
+            &--wrapper{
+                display: none;
+                align-items: center;
+            }
+        }
+    }
+}

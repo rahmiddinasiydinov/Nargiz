@@ -36,7 +36,7 @@ function Home() {
                 {data?.map((e, i) => (
                   <SwiperSlide key={i}>
                     <div className="view__wrapper">
-                      <div>
+                      <div className="view__content">
                         <h2 className="view__title">{e.name}</h2>
                         <p className="view__text">{e.desc}</p>
                         <Link to="/products" className="view__btn">
@@ -127,7 +127,7 @@ function Home() {
                 </Link>
               </div>
             </div>
-            <div className="gift__product--wrapper">
+            <div className="gift__product--wrapper gift__second">
               <div className="gift__info">
                 <h4 className="gift__info--title">{gift[1]?.name}</h4>
                 <p className="gift__info--text">{gift[1]?.desc}</p>

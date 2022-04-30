@@ -3,11 +3,17 @@ import './Header.scss';
 import { ReactComponent as Search } from "../../Assets/SVG/search.svg";
 import { ReactComponent as Phone } from "../../Assets/SVG/phone.svg";
 function Header() {
-    
+  const search = (e) => {
+    e.preventDefault();
+    const { search } = e.target.elements;
+    console.log(search.value);
+    alert('Kechirasiz, Qidirish tizimi faol emas, noqulayliklar uchun uzr so\'raymiz');
+    search.value=''
+    }
     return (
       <header className="header">
         <div className="container">
-          <form className="header__filter">
+          <form className="header__filter" onSubmit={search}>
             <Link to="/" className="header__logo">
               nargiz
             </Link>
@@ -19,6 +25,7 @@ function Header() {
                 type={"text"}
                 className="header__input"
                 placeholder="Search anything"
+                name="search"
               />
               <button className="header__search">
                 <Search />
@@ -34,19 +41,19 @@ function Header() {
           <nav className="header__nav">
             <ul className="header__list">
               <li className="header__item">
-                <a className={'header__link'}  href="#about">About company</a>
+                <a className={'header__link'}   href="#about">About company</a>
               </li>
               <li className="header__item">
-              <NavLink  className={'header__link'} to="/">Home page</NavLink>
+              <NavLink  className={'header__link'}  to="/">Home page</NavLink>
               </li>
               <li className="header__item">
-              <a  className={'header__link'} href="#contact">Contacts</a>
+              <a  className={'header__link'}  href="#contact">Contacts</a>
               </li>
               <li className="header__item">
-              <NavLink  className={'header__link'} to="/products">All Production</NavLink>
+              <NavLink  className={'header__link'}  to="/products">All Production</NavLink>
               </li>
               <li className="header__item">
-              <NavLink  className={'header__link'} to="/terms">Terms and Conditions</NavLink>
+              <NavLink  className={'header__link'}  to="/terms">Terms and Conditions</NavLink>
               </li>
             </ul>
           </nav>

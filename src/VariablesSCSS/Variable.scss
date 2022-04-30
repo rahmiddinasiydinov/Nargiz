@@ -13,11 +13,19 @@
     box-sizing: border-box;
     border: 2px solid #156963;
     cursor: pointer;
+    display: block; 
+    text-align: center;
+    max-width: 100%;
     &:hover{
         transition: .3s;
         color:#156963;
         border: 2px solid #156963;
         background: #FFFFFF;
+    }
+    @media screen and (max-width:600px) {
+        font-size: 14px;
+        line-height: 14px;
+        padding: 15px 15px; 
     }
 }
 @mixin button__light {
@@ -42,6 +50,11 @@
         background: #156963;
         border-color: #fff;
     }
+     @media screen and (max-width:600px) {
+        font-size: 14px;
+        line-height: 14px;
+        padding: 15px 15px; 
+    }
 }
 @mixin text {
     font-family: 'Poppins';
@@ -65,7 +78,8 @@
     box-sizing: border-box;
     border-radius: 6px;
     outline: #156963;
-    max-width: 100%;
     width: 100%;
+    max-width: 100%;
     margin-bottom: 32px;
 }
+

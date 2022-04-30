@@ -140,3 +140,17 @@
         transform: rotate(-360deg);
     }
 }
+
+
+@media screen and (max-width:450px) {
+    .modal{
+        &__wrapper{
+            max-width: 100%;
+
+        }
+        &__exit{
+            right: -5px;
+            top: -30px;
+        }
+    }
+}

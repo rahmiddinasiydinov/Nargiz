@@ -82,3 +82,122 @@
         }
     }
 }
+@media screen and (max-width:1350px) {
+    .about{
+    padding: 50px 0;
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 700px;
+    }
+    &__content{
+        padding-top: 200px;
+        width: 90%;
+    }
+    &__images{
+        width: 50%;
+        position: relative;
+    }
+    &__img{
+        &--up{
+            position: absolute;
+            z-index:1 ;
+            left: 187px;
+            top: 105px;
+        }
+    }
+    &__title{
+        color: #fff;
+        
+    }
+    &__text{
+        margin-top: 32px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #FFFFFF;
+        opacity: 0.75;
+        width: 100%
+    }
+    &__btn{
+        @include button__light;
+        display: inline-block;
+        cursor: pointer;
+        margin-top: 34px;
+        border:2px solid #ffffff ;
+    }
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 150px;
+    }
+    &__item{
+        &--header{
+            display: flex;
+            align-items: center;
+        }
+        &--title{
+            font-family: 'Montserrat';
+            width: 137px;
+            margin-left: 15px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            text-decoration-line: line-through;
+            color: #FFFFFF;
+            
+        }
+        &--text{
+            margin-top: 16px;
+            width: 236px;
+            max-width: 100%;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 16px;
+            text-decoration-line: line-through;
+            color: #FFFFFF;
+        }
+    }
+}
+}
+@media screen and (max-width:450px) {
+    .about{
+    &__images{
+        width: 90%;
+        position: relative;
+    }
+    &__img{
+        width: 300px;
+        &--up{
+            position: absolute;
+            z-index:1 ;
+            left: 127px;
+            top: 75px;
+            width: 200px;
+        }
+        &--down{
+            width: 200px;
+        }
+    }
+    &__content{
+        padding-top: 150px;
+    }
+
+
+
+    &__item{
+        margin-bottom: 30px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}}

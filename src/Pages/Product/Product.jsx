@@ -86,7 +86,7 @@ function Products() {
                 </Link>
               </div>
             </div>
-            <div className="gift__product--wrapper">
+            <div className="gift__product--wrapper gift__second">
               <div className="gift__info">
                 <h4 className="gift__info--title">{gift[1]?.name}</h4>
                 <p className="gift__info--text">{gift[1]?.desc}</p>
