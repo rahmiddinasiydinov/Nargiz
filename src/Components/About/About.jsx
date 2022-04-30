@@ -7,7 +7,7 @@ import plant from '../../Assets/SVG/plant.svg';
 import dollar from '../../Assets/SVG/dollar.svg';
 function About() {
     return (
-      <section className="about">
+      <section className="about" id='about'>
         <div className="container">
           <div className="about__wrapper">
             <div className="about__images">
@@ -29,7 +29,7 @@ function About() {
                 similique ullam et. Ipsum ipsam temporibus quo ea natus enim
                 quae officia nulla.{" "}
               </p>
-              <button className="about__btn">Contact us</button>
+              <a className="about__btn" href='#contact'>Contact us</a>
             </div>
           </div>
           <ul className="about__list">

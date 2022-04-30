@@ -1,0 +1,142 @@
+@import '../../VariablesSCSS/Variable.scss';
+.modal{
+    &__title{
+        font-family: 'Poppins' !important;
+        font-style: normal !important;
+        font-weight: 400 !important;
+        font-size: 18px !important;
+        line-height: 27px !important;
+        text-align: center !important;
+        color: #333333 !important;
+        margin-bottom: 50px;
+    }
+    &__wrapper{
+        position: relative;
+    }
+    &__exit{
+        position: absolute;
+        right: -20px;
+        top: -20px;
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        align-items: center;
+        color: #828282;
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    &__input{
+        border: 1px solid #156963;
+        padding:20px 10px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        width: 90%;
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+        &--wrapper{
+            width: 90%;
+            max-width: 100%;
+            margin: auto;
+            box-sizing: border-box;
+            border-radius: 5px;
+            display:flex;
+            justify-content: center;
+            overflow: hidden;
+            align-items: center;
+        }
+        &--tel{
+            border: 1px solid #156963;
+            padding:20px 10px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            display: block;
+            margin: auto;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #FFFFFF;
+            width: 80%;
+        }
+        
+    }
+    &__submit{
+        background-color: #156963;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        transform: translateX(-5px);
+        border: 1px solid #156963;
+        padding:20px 10px;
+        display: block;
+        margin: auto;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        width: 20%;
+        cursor: pointer;
+    }
+    &__icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #14BE25; 
+        border: 5px solid #14BE25;
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        margin: auto;
+        box-sizing: border-box
+    }
+    &__loading{
+        @extend .modal__icon;
+        background-color: transparent;
+        border: 5px solid transparent;
+        border-top: 5px solid #14BE25;
+        border-bottom: 5px solid #14BE25;
+        animation: load infinite 3s linear;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--small{
+            @extend .modal__icon;
+            width: 60px;
+            height: 60px;
+            background-color: transparent;
+            border: 5px solid transparent;
+            border-top: 5px solid #14BE25;
+            border-bottom: 5px solid #14BE25;
+            animation: load-small infinite 1.5s linear;
+            
+        }
+    }
+    &__link{
+        @include button;
+        border-radius: 5px;
+        margin-top: 30px;
+    }
+    &__error{
+        color: #ff0000;
+        padding: 10px;
+        font-size: 20px;
+    }
+}
+@keyframes load {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes load-small {
+    100%{
+        transform: rotate(-360deg);
+    }
+}

@@ -27,27 +27,26 @@ function Header() {
             <a href="tel:+998 95 555 55 55" className="header__btn">
               <Phone className="phone" />
               <span>
-                {" "}
-                +998 95 555 55 55 <br /> Bepul konsultatsiya{" "}
+                +998 95 555 55 55 
               </span>
             </a>
           </form>
           <nav className="header__nav">
             <ul className="header__list">
               <li className="header__item">
-                <NavLink className={'header__link'}  to="#">About company</NavLink>
+                <a className={'header__link'}  href="#about">About company</a>
               </li>
               <li className="header__item">
               <NavLink  className={'header__link'} to="/">Home page</NavLink>
               </li>
               <li className="header__item">
-              <NavLink  className={'header__link'} to="#">Contacts</NavLink>
+              <a  className={'header__link'} href="#contact">Contacts</a>
               </li>
               <li className="header__item">
               <NavLink  className={'header__link'} to="/products">All Production</NavLink>
               </li>
               <li className="header__item">
-              <NavLink  className={'header__link'} to="#">Terms and Conditions</NavLink>
+              <NavLink  className={'header__link'} to="/terms">Terms and Conditions</NavLink>
               </li>
             </ul>
           </nav>

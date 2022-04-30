@@ -9,9 +9,11 @@
         justify-content: space-evenly;
     }
     &__swiper{
-        background-image: url('../../Assets/SVG/N.svg');
         background-position:right center ;
         background-repeat: no-repeat;
+    }
+    &__img{
+        width: 200px;
     }
     &__title{
         font-family: 'Helvetica,', "Poppins", sans-serif;
@@ -20,7 +22,7 @@
         font-size: 66.4154px;
         line-height: 66px;
         color: #156963; 
-        width: 756px;
+        width:476px;
         max-width: 100%;
     }
     &__text{
@@ -62,7 +64,6 @@
 .gift{
     margin-top: 100px;
     padding-top: 80px;
-    background-image: url('../../Assets/SVG/G.svg');
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain;
@@ -157,6 +158,12 @@
                 transform: .3s;
             }
             
+        }
+        &--btn{
+            @extend .gift__info--link;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
         }
         
     }

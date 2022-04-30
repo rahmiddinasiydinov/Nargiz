@@ -9,7 +9,6 @@ import Famous from "../../Components/Famous/Famous";
 import About from "../../Components/About/About";
 import img from '../../Assets/Images/gift.png';
 import kattle from '../../Assets/Images/kattle.png';
-import Iimg from '../../Assets/SVG/I.svg';
 import Project from "../../Components/Project/Project";
 function Home() {
   const [data, setData] = useState([]);
@@ -32,6 +31,7 @@ function Home() {
                 navigation={true}
                 modules={[Navigation]}
                 className="mySwiper"
+                
               >
                 {data?.map((e, i) => (
                   <SwiperSlide key={i}>
@@ -39,9 +39,11 @@ function Home() {
                       <div>
                         <h2 className="view__title">{e.name}</h2>
                         <p className="view__text">{e.desc}</p>
-                        <Link to='/products' className="view__btn">Explore Catalogue</Link>
+                        <Link to="/products" className="view__btn">
+                          Explore Catalogue
+                        </Link>
                       </div>
-                      <img src={e.img} alt="img is failed" />
+                      <img src={e.img} alt="img is failed" className="view__img"/>
                     </div>
                   </SwiperSlide>
                 ))}
@@ -91,8 +93,12 @@ function Home() {
                   enim quae officia nulla.
                 </p>
                 <div className="gift__buttons">
-                  <button className="gift__contact">Contact us</button>
-                  <button className="gift__catalogue">Catalogue</button>
+                  <a href="#contact" className="gift__contact">
+                    Contact us
+                  </a>
+                  <Link to="/products" className="gift__catalogue">
+                    Catalogue
+                  </Link>
                 </div>
               </div>
               <img src={img} alt="img" className="gift__img" />
@@ -113,18 +119,24 @@ function Home() {
               <div className="gift__info">
                 <h4 className="gift__info--title">{gift[0]?.name}</h4>
                 <p className="gift__info--text">{gift[0]?.desc}</p>
-                <a href="/" className="gift__info--link">
+                <Link
+                  to={`/single/${gift[0]?._id}`}
+                  className="gift__info--link"
+                >
                   View details
-                </a>
+                </Link>
               </div>
             </div>
             <div className="gift__product--wrapper">
               <div className="gift__info">
                 <h4 className="gift__info--title">{gift[1]?.name}</h4>
                 <p className="gift__info--text">{gift[1]?.desc}</p>
-                <a href="/" className="gift__info--link">
+                <Link
+                  to={`/single/${gift[1]?._id}`}
+                  className="gift__info--link"
+                >
                   View details
-                </a>
+                </Link>
               </div>
               <div className="gift__product--img">
                 <div className="rec"></div>
@@ -138,7 +150,6 @@ function Home() {
           </div>
         </section>
         <section className="coupon">
-          <img className="coupon__Iimg" src={Iimg} alt =""/>
           <div className="coupon__container">
             <div className="coupon__wrapper">
               <div className="coupon__content">
@@ -156,7 +167,7 @@ function Home() {
             </div>
           </div>
         </section>
-        <Project/>
+        <Project />
       </main>
     </>
   );

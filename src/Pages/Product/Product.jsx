@@ -31,9 +31,13 @@ function Products() {
             <h2 className="product__famous--title">The most famous products</h2>
             <div className="product__famous--wrapper">
               {data?.map((e, i) => (
-                  <Link key={i} to={`/single/${e._id}`} className='product__famous--link'>
-                    <FamousCard img={e.img} title={e.desc} price={e.price} />
-                  </Link>
+                <Link
+                  key={i}
+                  to={`/single/${e._id}`}
+                  className="product__famous--link"
+                >
+                  <FamousCard img={e.img} title={e.desc} price={e.price} />
+                </Link>
               ))}
             </div>
           </div>
@@ -74,18 +78,24 @@ function Products() {
               <div className="gift__info">
                 <h4 className="gift__info--title">{gift[0]?.name}</h4>
                 <p className="gift__info--text">{gift[0]?.desc}</p>
-                <a href="/" className="gift__info--link">
+                <Link
+                  to={`/single/${gift[0]?._id}`}
+                  className="gift__info--link"
+                >
                   View details
-                </a>
+                </Link>
               </div>
             </div>
             <div className="gift__product--wrapper">
               <div className="gift__info">
                 <h4 className="gift__info--title">{gift[1]?.name}</h4>
                 <p className="gift__info--text">{gift[1]?.desc}</p>
-                <a href="/" className="gift__info--link">
+                <Link
+                  to={`/single/${gift[1]?._id}`}
+                  className="gift__info--link"
+                >
                   View details
-                </a>
+                </Link>
               </div>
               <div className="gift__product--img">
                 <div className="rec"></div>

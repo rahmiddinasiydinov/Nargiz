@@ -8,7 +8,7 @@ import FamousCard from '../FamousCard/FamousCard';
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 function Famous() {
       const [data, setData] = useState([]);
@@ -23,7 +23,9 @@ function Famous() {
           <h2 className="famous__title">The most famous products</h2>
           <div className="famous__slide">
             <Swiper
-              slidesPerView={3}
+              slidesPerView={
+                window.screen.width > 1000 ? 3 : window.screen.width > 600?2:1
+              }
               spaceBetween={30}
               slidesPerGroup={1}
               loop={true}
@@ -44,7 +46,9 @@ function Famous() {
               ))}
             </Swiper>
           </div>
-          <button className='famous__btn'>See All products</button>
+          <Link to="products" className="famous__btn">
+            See All products
+          </Link>
         </div>
       </section>
     );

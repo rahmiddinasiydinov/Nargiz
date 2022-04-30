@@ -53,7 +53,7 @@ const Alert = React.forwardRef(function Alert(props, ref) {
           Sent
         </Alert>
       </Snackbar>
-      <section className="project">
+      <section className="project" id='contact'>
         <div className="container">
           <div className="project__wrapper">
             <div className="project__content">

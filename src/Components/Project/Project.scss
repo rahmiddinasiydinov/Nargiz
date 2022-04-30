@@ -2,7 +2,6 @@
 .project{
     margin-top: 150px;
     padding-bottom: 250px;
-    background-image: url('../../Assets/Images/Z.png');
     background-position: left 400px;
     background-repeat: no-repeat;
     &__wrapper{
@@ -63,14 +62,14 @@
     }
     &__round{
         position: absolute;
-        right: -55%;
+        right: -75%;
         bottom: 100px;
         animation-name: round;
         animation-duration: 5s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
         transform: skew(45deg);
-        z-index: -1;
+        z-index: 1;
     }
     &__appeal{
         margin-top: 40px;

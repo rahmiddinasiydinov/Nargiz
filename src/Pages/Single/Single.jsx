@@ -20,13 +20,18 @@ import FamousCard from "../../Components/FamousCard/FamousCard";
 import { useParams } from "react-router";
 import { ReactComponent as Deliver } from "../../Assets/SVG/deliver.svg";
 import { ReactComponent as Return } from "../../Assets/SVG/return.svg";
+import TransitionsModal from "../../Components/SaleModel/SaleModel";
 function Single() {
   const [data, setData] = useState([]);
     const [gift, setGift] = useState([]);
     let params = useParams();
     const [id, setId] = useState(params.id);
     const [single, setSingle] = useState({});
-    console.log(id);
+  console.log(id);
+  //MUI Model
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
   useEffect(() => {
     fetch("https://nargiz-back.herokuapp.com/pottery")
       .then((res) => res.json())
@@ -40,6 +45,7 @@ function Single() {
   }, [id]);
   return (
     <>
+     {open? <TransitionsModal open={open} handleClose={handleClose} id={id} />:""}
       <main className="main">
         <section className="single" id="single">
           <div className="container">
@@ -79,7 +85,7 @@ function Single() {
                 </Swiper>
               </div>
               <div className="single__info">
-                <img width={250} height={685} src={single?.img} alt="img" />
+                <img width={250} src={single?.img} alt="img" />
                 <div className="single__content">
                   <p className="single__text">{single.desc}</p>
                   <div className="single__clouses">
@@ -105,7 +111,9 @@ function Single() {
                       </li>
                     </ul>
                   </div>
-                  <button className="single__btn">Hoziroq xarid qilish</button>
+                  <button className="single__btn" onClick={handleOpen}>
+                    Hoziroq xarid qilish
+                  </button>
                 </div>
               </div>
             </div>
@@ -168,7 +176,10 @@ function Single() {
               <div className="gift__info">
                 <h4 className="gift__info--title">{gift[0]?.name}</h4>
                 <p className="gift__info--text">{gift[0]?.desc}</p>
-                <a href="/" className="gift__info--link">
+                <a href="#single"
+                  onClick={() => setId(gift[0]?._id)}
+                  className="gift__info--btn"
+                >
                   View details
                 </a>
               </div>
@@ -177,7 +188,10 @@ function Single() {
               <div className="gift__info">
                 <h4 className="gift__info--title">{gift[1]?.name}</h4>
                 <p className="gift__info--text">{gift[1]?.desc}</p>
-                <a href="/" className="gift__info--link">
+                <a href="#single"
+                  onClick={() => setId(gift[1]?._id)}
+                  className="gift__info--btn"
+                >
                   View details
                 </a>
               </div>

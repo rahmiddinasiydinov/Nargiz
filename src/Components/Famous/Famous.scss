@@ -1,6 +1,5 @@
 @import '../../VariablesSCSS/Variable.scss';
 .famous{
-    background-image: url('../../Assets/SVG/A.svg');
     background-repeat: no-repeat;
     background-position: right  center;
     background-size: contain;
@@ -15,7 +14,9 @@
         max-width: 100%;
     }
     &__btn{
+        @include button;
+        display: inline-block;
         margin-top: 46px;
-        @include button
+
     }
 }
