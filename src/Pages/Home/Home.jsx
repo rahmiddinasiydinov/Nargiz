@@ -149,24 +149,6 @@ function Home() {
             </div>
           </div>
         </section>
-        <section className="coupon">
-          <div className="coupon__container">
-            <div className="coupon__wrapper">
-              <div className="coupon__content">
-                {" "}
-                <h2 className="coupon__title">Get you coupon card $150</h2>
-                <p className="coupon__text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse varius enim in eros elementum.
-                </p>
-                <a href="/products" className="coupon__link">
-                  View
-                </a>
-              </div>
-              <img src={kattle} alt="" className="coupon__img" />
-            </div>
-          </div>
-        </section>
         <Project />
       </main>
     </>
