@@ -12,8 +12,6 @@ import { Pagination } from "swiper";
 //SWIPER
 
 
-import vasa from "../../Assets/Images/vasa.png";
-import Iimg from "../../Assets/SVG/I.svg";
 import Project from "../../Components/Project/Project";
 import { Link } from "react-router-dom";
 import FamousCard from "../../Components/FamousCard/FamousCard";
@@ -21,6 +19,8 @@ import { useParams } from "react-router";
 import { ReactComponent as Deliver } from "../../Assets/SVG/deliver.svg";
 import { ReactComponent as Return } from "../../Assets/SVG/return.svg";
 import TransitionsModal from "../../Components/SaleModel/SaleModel";
+import vasa1 from "../../Assets/Images/vasa1.png";
+import vasa2 from "../../Assets/Images/vasa2.png";
 function Single() {
   const [data, setData] = useState([]);
     const [gift, setGift] = useState([]);
@@ -45,7 +45,11 @@ function Single() {
   }, [id]);
   return (
     <>
-     {open? <TransitionsModal open={open} handleClose={handleClose} id={id} />:""}
+      {open ? (
+        <TransitionsModal open={open} handleClose={handleClose} id={id} />
+      ) : (
+        ""
+      )}
       <main className="main">
         <section className="single" id="single">
           <div className="container">
@@ -85,7 +89,12 @@ function Single() {
                 </Swiper>
               </div>
               <div className="single__info">
-                <img width={250} src={single?.img} alt="img" className="single__img" />
+                <img
+                  width={250}
+                  src={single?.img}
+                  alt="img"
+                  className="single__img"
+                />
                 <div className="single__content">
                   <p className="single__text">{single.desc}</p>
                   <div className="single__clouses">
@@ -165,41 +174,37 @@ function Single() {
             <div className="gift__product--wrapper">
               <div className="gift__product--img">
                 <div className="rec"></div>
-                <img
-                  src={gift[0]?.img}
-                  alt="img"
-                  className="gift__img--product"
-                />
+                <img src={vasa1} alt="img" className="gift__img--product" />
               </div>
               <div className="gift__info">
-                <h4 className="gift__info--title">{gift[0]?.name}</h4>
-                <p className="gift__info--text">{gift[0]?.desc}</p>
-                <a href="#single"
-                  onClick={() => setId(gift[0]?._id)}
-                  className="gift__info--btn"
-                >
-                  View details
-                </a>
+                <h4 className="gift__info--title">Gold & Black Pottery</h4>
+                <p className="gift__info--text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
+                  do eiusmod tempor incididunt ut labore dolore aua. Ut enim ad
+                  minim veniam, quis nostrud exercitationulco laboris nisi ut
+                  aliquip ex ea commodo consequatuisaute.
+                </p>
+                <Link to={`/products`} className="gift__info--link">
+                  View more
+                </Link>
               </div>
             </div>
             <div className="gift__product--wrapper gift__second">
               <div className="gift__info">
-                <h4 className="gift__info--title">{gift[1]?.name}</h4>
-                <p className="gift__info--text">{gift[1]?.desc}</p>
-                <a href="#single"
-                  onClick={() => setId(gift[1]?._id)}
-                  className="gift__info--btn"
-                >
-                  View details
-                </a>
+                <h4 className="gift__info--title">Orange Ceramic</h4>
+                <p className="gift__info--text">
+                  Pri cu dico labores officiis, odio principes complectitur ad
+                  sea. Sea id doctus forensibus, nec lorem vocent aliquam eu.
+                  Aliquid definitiones id cum, ad meliore perpetua referrentur
+                  sed. Quas suscipit ad mea verear vivendo tincidunt.
+                </p>
+                <Link to={`/products`} className="gift__info--link">
+                  View more
+                </Link>
               </div>
               <div className="gift__product--img">
                 <div className="rec"></div>
-                <img
-                  src={gift[1]?.img}
-                  alt="img"
-                  className="gift__img--product"
-                />
+                <img src={vasa2} alt="img" className="gift__img--product" />
               </div>
             </div>
           </div>
