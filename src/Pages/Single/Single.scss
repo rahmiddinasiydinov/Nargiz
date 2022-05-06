@@ -4,16 +4,20 @@
         margin-top: 92px;
     }
     &__wrapper{
-        margin-top: 100px;
+        margin-top: 200px;
+        max-width: 100%;
         display: flex;
         justify-content: space-between;
-        
+        overflow: visible;
+
     }
     &__swipe{
-        width: 150px;
+        width: 200px;
         max-width: 100%;
         margin-right: 100px;
         height: 750px;
+        overflow: visible;
+
         &--wrapper{
             margin-left: 20px;
             width: 100%;
@@ -25,7 +29,9 @@
             overflow: visible;
         }
         &--img{
-            height: 70% ;
+            height: 190px ;
+            max-width: 100%;
+            border-radius: 5px;
         }
     }
     &__info{
@@ -37,10 +43,11 @@
         
     }
     &__img{
-        width: 250px;
-        // height: 685px;
+      width: 400px;
         max-width: 100%;
         max-height: 100%;
+        border-radius: 10px;
+        margin-right: 20px;
     }
     &__content{
         width: 580px;
@@ -125,6 +132,9 @@
     &-vertical{
         height: 100%;
     }
+    &-wrapper{
+        overflow:visible !important;
+    }
 }
 
 
@@ -150,7 +160,6 @@
         flex-grow: 1;
     }
     &__img{
-        width: 150px;
         max-width: 100%;
     }
     &__content{

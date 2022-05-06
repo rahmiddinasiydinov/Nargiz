@@ -121,7 +121,7 @@ function Single() {
             <p className="single__desciption--text">{single?.desc}</p>
           </div>
         </section>
-        <section className="coupon product__coupon">
+        {/* <section className="coupon product__coupon">
           <img className="coupon__Iimg product__Iimg" src={Iimg} alt="" />
           <div className="coupon__container">
             <div className="coupon__wrapper">
@@ -142,7 +142,7 @@ function Single() {
               <img src={vasa} alt="" className="coupon__img" />
             </div>
           </div>
-        </section>
+        </section> */}
         <section className="product__famous">
           <div className="container">
             <h2 className="product__famous--title">The most famous products</h2>

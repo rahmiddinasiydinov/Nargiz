@@ -42,7 +42,7 @@ function Products() {
             </div>
           </div>
         </section>
-        <section className="coupon product__coupon">
+        {/* <section className="coupon product__coupon">
           <img className="coupon__Iimg product__Iimg" src={Iimg} alt="" />
           <div className="coupon__container">
             <div className="coupon__wrapper">
@@ -63,7 +63,7 @@ function Products() {
               <img src={vasa} alt="" className="coupon__img" />
             </div>
           </div>
-        </section>
+        </section> */}
         <section className="gift__product">
           <div className="container">
             <div className="gift__product--wrapper">

@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import './Header.scss';
 import { ReactComponent as Search } from "../../Assets/SVG/search.svg";
 import { ReactComponent as Phone } from "../../Assets/SVG/phone.svg";
+// import {ReactComponent as Logo } from '../../Assets/Images/logo.svg';
 function Header() {
   const search = (e) => {
     e.preventDefault();
@@ -15,7 +16,7 @@ function Header() {
         <div className="container">
           <form className="header__filter" onSubmit={search}>
             <Link to="/" className="header__logo">
-              nargiz
+            Nargiz
             </Link>
             <div className="header__form">
               <select className="header__select">
