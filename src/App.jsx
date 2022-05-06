@@ -15,6 +15,7 @@ function App() {
   const dispatch = useDispatch();
   const loading = useSelector(state => state.loader.globalLoading);
   const spin = useRef();
+  
   useEffect(() => {
     fetch("https://nargiz-back.herokuapp.com/pottery")
       .then((res) => res.json())

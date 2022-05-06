@@ -12,16 +12,7 @@ function Footer() {
             {" "}
             <section className="footer__content">
               <ul className="footer__social">
-                <li className="footer__social--item">
-                  <a href="#about" className="footer__social--link">
-                    About us
-                  </a>
-                </li>
-                <li className="footer__social--item">
-                  <a href="#contact" className="footer__social--link">
-                   Contact us
-                  </a>
-                </li>
+            
                 <li className="footer__social--item">
                   <a href="facebook" className="footer__social--link">
                     <Facebook className="footer__social--icon" />
@@ -48,11 +39,7 @@ function Footer() {
                   </a>
                 </li>
               </ul>
-              <p className="footer__text">
-                Thank you for getting in touch!
-                <br /> Kindly.
-                <br /> Fill the form, have a great day!
-              </p>
+    
             </section>
         </div>
       </footer>

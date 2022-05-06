@@ -117,8 +117,6 @@ function Single() {
                 </div>
               </div>
             </div>
-            <h3 className="single__description">Description</h3>
-            <p className="single__desciption--text">{single?.desc}</p>
           </div>
         </section>
         {/* <section className="coupon product__coupon">

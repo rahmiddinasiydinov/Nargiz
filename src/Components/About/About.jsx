@@ -10,11 +10,11 @@ function About() {
       <section className="about" id='about'>
         <div className="container">
           <div className="about__wrapper">
-            <div className="about__images">
+            <div className="about__images" data-aos ='fade-up-right'>
               <img className="about__img--down" src={img2} alt="img" />
               <img className="about__img--up" src={img1} alt="img" />
             </div>
-            <div className="about__content">
+            <div className="about__content" data-aos='fade-up-left'>
               <h2 className="about__title">About us</h2>
               <p className="about__text">
                 Debitis ea dicta ea eum laboriosam quis dolore repudiandae. Est
@@ -33,7 +33,7 @@ function About() {
             </div>
           </div>
           <ul className="about__list">
-            <li className="about__item">
+            <li className="about__item" data-aos='zoom-in-up'>
               <h4 className="about__item--header">
                 <img src={fast} alt="fast" className="about__item--img" />
                 <span className="about__item--title">
@@ -45,7 +45,7 @@ function About() {
                 industry. Lorem Ipsum has been the industry's standard{" "}
               </p>
             </li>
-            <li className="about__item">
+            <li className="about__item" data-aos='zoom-in-up'>
               <h4 className="about__item--header">
                 <img src={headphone} alt="fast" className="about__item--img" />
                 <span className="about__item--title">
@@ -57,7 +57,7 @@ function About() {
                 industry. Lorem Ipsum has been the industry's standard{" "}
               </p>
             </li>
-            <li className="about__item">
+            <li className="about__item" data-aos='zoom-in-up'>
               <h4 className="about__item--header">
                 <img src={plant} alt="fast" className="about__item--img" />
                 <span className="about__item--title">Original <br/> Plants</span>
@@ -67,7 +67,7 @@ function About() {
                 industry. Lorem Ipsum has been the industry's standard{" "}
               </p>
             </li>
-            <li className="about__item">
+            <li className="about__item" data-aos='zoom-in-up'>
               <h4 className="about__item--header">
                 <img src={dollar} alt="fast" className="about__item--img" />
                 <span className="about__item--title">
