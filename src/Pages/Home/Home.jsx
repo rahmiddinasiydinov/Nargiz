@@ -33,25 +33,40 @@ function Home() {
                 modules={[Navigation]}
                 className="mySwiper"
               >
-                {data?.map((e, i) => (
-                  <SwiperSlide key={i}>
-                    <div className="view__wrapper">
-                      <div className="view__content" data-aos="fade-up-right">
-                        <h2 className="view__title">{e.name}</h2>
-                        <p className="view__text">{e.desc}</p>
-                        <Link to="/products" className="view__btn">
-                          Explore Catalogue
-                        </Link>
-                      </div>
-                      <img
-                        src={e.img}
-                        alt="img is failed"
-                        data-aos="fade-up-left"
-                        className="view__img"
-                      />
+                <SwiperSlide>
+                  <div className="view__wrapper">
+                    <div className="view__content" data-aos="fade-up-right">
+                      <h2 className="view__title">Gold & Black Pottery</h2>
+                      <p className="view__text">Риштанская керамика</p>
+                      <Link to="/products" className="view__btn">
+                        посмотреть больше
+                      </Link>
                     </div>
-                  </SwiperSlide>
-                ))}
+                    <img
+                      src={vasa1}
+                      alt="img is failed"
+                      data-aos="fade-up-left"
+                      className="view__img"
+                    />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="view__wrapper">
+                    <div className="view__content" data-aos="fade-up-right">
+                      <h2 className="view__title">Orange Ceramic</h2>
+                      <p className="view__text">Риштанская керамика</p>
+                      <Link to="/products" className="view__btn">
+                        посмотреть больше
+                      </Link>
+                    </div>
+                    <img
+                      src={vasa2}
+                      alt="img is failed"
+                      data-aos="fade-up-left"
+                      className="view__img"
+                    />
+                  </div>
+                </SwiperSlide>
               </Swiper>
             </div>
           </div>
@@ -82,7 +97,8 @@ function Home() {
             <div className="gift__wrapper">
               <div className="gift__content">
                 <h2 className="gift__title">
-                  We have also production channel under special gift!
+                  У нас также есть производственный канал под специальный
+                  подарок!
                 </h2>
                 <p className="gift__text">
                   Debitis ea dicta ea eum laboriosam quis dolore repudiandae.
@@ -99,7 +115,7 @@ function Home() {
                 </p>
                 <div className="gift__buttons">
                   <a href="#contact" className="gift__contact">
-                    Contact us
+                    Связаться с нами
                   </a>
                 </div>
               </div>
@@ -123,7 +139,7 @@ function Home() {
                   aliquip ex ea commodo consequatuisaute.
                 </p>
                 <Link to={`/products`} className="gift__info--link">
-                  View more
+                  Посмотреть больше
                 </Link>
               </div>
             </div>
@@ -137,7 +153,7 @@ function Home() {
                   sed. Quas suscipit ad mea verear vivendo tincidunt.
                 </p>
                 <Link to={`/products`} className="gift__info--link">
-                  View more
+                  Посмотреть больше
                 </Link>
               </div>
               <div className="gift__product--img">

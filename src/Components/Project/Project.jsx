@@ -53,17 +53,17 @@ const Alert = React.forwardRef(function Alert(props, ref) {
           Sent
         </Alert>
       </Snackbar>
-      <section className="project" id='contact'>
+      <section className="project" id="contact">
         <div className="container">
           <div className="project__wrapper">
             <div className="project__content">
               <h2 className="project__title">
-                Have a project! <br /> Let’s discuss{" "}
+                Есть проект! <br /> Давайте обсудим{" "}
               </h2>
               <p className="project__text">
-                Thank you for getting in touch!
-                <br /> Kindly.
-                <br /> Fill the form, have a great day!
+                Спасибо, что связались!
+                <br /> Пожалуйста.
+                <br /> Заполните форму, хорошего дня!
               </p>
             </div>
             <div className="project__form">
@@ -73,43 +73,38 @@ const Alert = React.forwardRef(function Alert(props, ref) {
                 alt="rounding pottery"
                 className="project__round"
               />
-              <h3 className="project__form--title">
-                Get in touch of the world
-              </h3>
+              <h3 className="project__form--title">Свяжитесь с миром</h3>
               <p className="project__form--text">
-                To contact us leave your number below
+                Для связи с нами оставьте свой номер ниже
               </p>
               <form className="project__appeal" onSubmit={sendApplication}>
                 <div className="project__input--wrapper">
                   <input
                     className="project__input name__input"
                     type={"text"}
-                    placeholder="Enter your name"
+                    placeholder="Введите ваше имя"
                     name="name"
                   />
                   <input
                     className="project__input name__input"
                     type={"email"}
-                    placeholder="Enter email"
+                    placeholder="Введите адрес  email"
                     name="email"
                   />
                 </div>
                 <input
                   type={"text"}
                   className="project__input"
-                  placeholder="Enter your subject title"
+                  placeholder="Введите название темы"
                   name="title"
                 />
                 <textarea
-                  placeholder="Enter your subject"
+                  placeholder="Введите тему"
                   name="desc"
                   className="project__textarea"
                 ></textarea>
-                <button
-                  type="submit"
-                  className="project__submit"
-                >
-                  SENT MESSAGE
+                <button type="submit" className="project__submit">
+                  ОТПРАВИТЬ СООБЩЕНИЕ
                 </button>
               </form>
             </div>

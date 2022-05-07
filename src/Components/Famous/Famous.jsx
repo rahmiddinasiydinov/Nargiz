@@ -20,11 +20,15 @@ function Famous() {
     return (
       <section className="famous">
         <div className="container">
-          <h2 className="famous__title">The most famous products</h2>
+          <h2 className="famous__title">Самые известные продукты</h2>
           <div className="famous__slide">
             <Swiper
               slidesPerView={
-                window.screen.width > 1000 ? 3 : window.screen.width > 600?2:1
+                window.screen.width > 1000
+                  ? 3
+                  : window.screen.width > 600
+                  ? 2
+                  : 1
               }
               spaceBetween={30}
               slidesPerGroup={1}
@@ -47,7 +51,7 @@ function Famous() {
             </Swiper>
           </div>
           <Link to="products" className="famous__btn">
-            See All products
+            Посмотреть все продукты
           </Link>
         </div>
       </section>

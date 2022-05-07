@@ -101,27 +101,27 @@ function Single() {
                     <ul className="singl__list">
                       <li className="single__item">
                         <h5 className="single__subtitle">
-                          <Deliver className="single__deliver" /> Yetkazib
-                          berish shartlari <br />
+                          <Deliver className="single__deliver" /> Условия
+                          доставки <br />
                           <span className="single__lighttext">
-                            Yetkazib berish xizmati bepul
+                            Услуга доставки бесплатна
                           </span>{" "}
                         </h5>
                       </li>
                       <li className="single__item">
                         <h5 className="single__subtitle">
                           <Return className="single__deliver" />
-                          Qaytib olish shartlari
+                          Условия возврата
                           <br />
                           <span className="single__lighttext">
-                            Learn More
+                            учить больше
                           </span>{" "}
                         </h5>
                       </li>
                     </ul>
                   </div>
                   <button className="single__btn" onClick={handleOpen}>
-                    Hoziroq xarid qilish
+                    Купить сейчас
                   </button>
                 </div>
               </div>
@@ -152,7 +152,7 @@ function Single() {
         </section> */}
         <section className="product__famous">
           <div className="container">
-            <h2 className="product__famous--title">The most famous products</h2>
+            <h2 className="product__famous--title">Самые известные продукты</h2>
             <div className="product__famous--wrapper">
               {data?.map((e, i) => (
                 <a
@@ -185,7 +185,7 @@ function Single() {
                   aliquip ex ea commodo consequatuisaute.
                 </p>
                 <Link to={`/products`} className="gift__info--link">
-                  View more
+                  Посмотреть больше
                 </Link>
               </div>
             </div>
@@ -199,7 +199,7 @@ function Single() {
                   sed. Quas suscipit ad mea verear vivendo tincidunt.
                 </p>
                 <Link to={`/products`} className="gift__info--link">
-                  View more
+                  Посмотреть больше
                 </Link>
               </div>
               <div className="gift__product--img">

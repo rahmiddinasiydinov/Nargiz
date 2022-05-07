@@ -27,7 +27,7 @@ function Products() {
       <main className="main">
         <section className="product__famous">
           <div className="container">
-            <h2 className="product__famous--title">The most famous products</h2>
+            <h2 className="product__famous--title">Самые известные продукты</h2>
             <div className="product__famous--wrapper">
               {data?.map((e, i) => (
                 <Link
