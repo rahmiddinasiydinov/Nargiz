@@ -1,5 +1,5 @@
 import React, { useEffect, useState }  from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide,  } from "swiper/react";
 import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -11,6 +11,7 @@ import img from '../../Assets/Images/gift.png';
 import Project from "../../Components/Project/Project";
 import vasa1 from '../../Assets/Images/vasa1.png';
 import vasa2 from "../../Assets/Images/vasa2.png";
+import {ReactComponent as Logo} from '../../Assets/SVG/logo.svg'
 function Home() {
   const [data, setData] = useState([]);
   const [gift, setGift] = useState([]);
@@ -71,22 +72,18 @@ function Home() {
             </div>
           </div>
           <div className="view__design">
-            <div className="container view__design--wrapper">
-              <span className="view__design--text">
-                Design tips for designers, that cover everything you need
-              </span>
-              <span className="view__design--text">
-                Design tips for designers, that cover everything you need
-              </span>
-              <span className="view__design--text">
-                Design tips for designers, that cover everything you need
-              </span>
-              <span className="view__design--text">
-                Design tips for designers, that cover everything you need
-              </span>
-              <span className="view__design--text">
-                Design tips for designers, that cover everything you need
-              </span>
+            <div className="view__design--wrapper">
+             
+                {[1, 2, 3, 4, 5, 6, 7].map((e) => {
+                  return (
+                        <Logo className="view__design--logo" />
+                  );
+                })}
+            
+               
+                
+
+            
             </div>
           </div>
         </section>

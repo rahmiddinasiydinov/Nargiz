@@ -15,6 +15,10 @@
         font-size: 14px;
         line-height: 24px;
         color: #3E3E3E;
+         &--img{
+            width: 60px;
+            height: 60px;
+        }
     }
     &__form{
         width: 760px;
@@ -150,6 +154,7 @@
         line-height: 24px;
         text-shadow:  3px 3px #3E3E3E;
         margin-bottom: 20px;
+       
     }
     &__link{
         color:  #ffffff;

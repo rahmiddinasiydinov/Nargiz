@@ -38,10 +38,10 @@
     }
     &__design{
         background: #156963;
-        padding: 40px 0;
+        padding: 0;
         &--wrapper{
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             
         }
         &--text{
@@ -52,6 +52,10 @@
             line-height: 14px;
             color: #FFFFFF;
             width: 186px;
+        }
+        &--logo{
+            width: 100px;
+            height: 100px;
         }
         
     }
@@ -320,3 +324,5 @@
   }
 }
 }
+
+
